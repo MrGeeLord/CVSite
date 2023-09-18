@@ -22,7 +22,8 @@ class Skill(models.Model):
     level = models.CharField(max_length=20, blank=True, null=True, choices=level_choice)
     # Use a CharField to store either the image URL or icon class
     image = models.FileField(blank=True, null=True, upload_to="skills")
-    image_icon = models.CharField(max_length=100, blank=True, null=True)
+    image_icon = models.CharField(max_length=100, blank=True, null=True,help_text='Enter icon from https://icons8.com/line-awesome in format (e.g., "fa fa-star")'
+    )
     # Add a field to specify if it's an icon or an uploaded image
     is_icon = models.BooleanField(default=False)
 
