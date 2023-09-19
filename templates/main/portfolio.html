@@ -55,9 +55,9 @@ Start Content
           <div class="col-md-6 pColMain">
             <div class="pCol">
               <a href="{% url 'main:portfolio' slug=obj.slug %}" >
-{#              {% if obj.image %}#}
+              {% if obj.image %}
               <img src="{{obj.image.url}}" alt="..." class="pImg">
-{#              {% endif %}#}
+              {% endif %}
               </a>
             </div>
           </div>
